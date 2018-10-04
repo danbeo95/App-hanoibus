@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ResultFindroadMapPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Thông tin lộ trình</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="map_canvas" #map_canvas></div>
+  <div class="info-route" [class.translateToBottom]="mTogglePopup" (click)="mTogglePopup=!mTogglePopup">
+    <ion-row class="top" align-items-center>
+      <ion-col col-9>
+        Tổng quãng đường <span style="color:red;font-weight:bold">{{mRoute.legs[0].distance.text}}</span>
+        <span style="color:red;font-weight:bold">-{{mRoute.legs[0].duration.value|time}}</span>
+      </ion-col>
+      <ion-col col-3 text-right>
+        <button ion-button clear>
+          <ion-icon name="md-arrow-up" *ngIf="!mTogglePopup"></ion-icon>
+          <ion-icon name="md-arrow-down" *ngIf="mTogglePopup"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <div class="scroll-routes">
+      <div *ngFor="let step of mRoute.legs[0].steps">
+        <img src="assets/imgs/icon_walk_big_1.png" alt="" *ngIf="step.travel_mode=='WALKING'">
+        <div *ngIf="step.travel_mode=='TRANSIT'" class="transit-bus">
+          <img src="assets/imgs/icon_bus_big_1.png" alt="">
+          {{step.name_busstop}}
+        </div>
+      </div>
+    </div>
+    <div class="instruction-route">
+      <ion-row *ngFor="let instruction of mInstructions" align-items-center class="item-instruction-route">
+        <ion-col col-2 align-self-center>
+          <img [src]="instruction.icon" alt="">
+        </ion-col>
+        <ion-col col-10>
+          <div >{{instruction.instruction}}</div>
+          <div style="text-align:right;color:red">{{instruction.distance?.text}} {{instruction.duration?.text}}</div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <button ion-button clear class="btn-mylocation" (click)="moveMyLocation()">
+    <img src="assets/imgs/btn_mylocation.png"  tapped alt="">
+  </button>
+</ion-content>

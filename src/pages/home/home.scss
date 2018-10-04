@@ -1,3 +1,30 @@
 page-home {
-
+    #map_canvas{
+        height: 70%;
+        width: 100%;
+    }
+    .toolbar-direction{
+        background: #fff;
+        width: 95%;
+        left:0;
+        right: 0;
+        margin: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 30%;
+        top:0px;
+        .buttons{
+            background: #dedede;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .buttons button{
+            color:#fff !important;
+            font-size: 1.2rem;
+        }
+    }
 }
+
+ion-app._gmaps_cdv_ .nav-decor{
+    background-color: transparent !important;
+  }

@@ -1,0 +1,48 @@
+page-reslut-find-road {
+    .toolbar-direction{
+        background: #fff;
+       
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .item-route{
+        background:#fff;
+        margin-bottom:10px;
+        box-shadow: 0px 0px 1px 5px #dedede;
+    }
+    .scroll-routes{
+        overflow-x: scroll;
+        white-space: nowrap;
+        flex-wrap: nowrap !important;
+        div{
+            display: inline-flex;
+            margin-left:5px;
+            width: auto;
+            height: 30px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    
+    }
+    .transit-bus{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            margin-right: 5px;
+        }
+        background: ghostwhite;
+        border-radius: 10px;
+        padding-right: 10px
+    }
+    .btn-detail{
+        font-size:1rem !important;
+        height: 30px;
+        text-align: right;
+        padding: 10px;
+        color:#fff;
+        text-transform: capitalize;
+    }
+}   

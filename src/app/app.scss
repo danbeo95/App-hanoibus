@@ -14,3 +14,56 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.app-root-ios .secondary-tabs .tabbar{
+    max-height: 44px !important;
+    height: 44px !important;
+    padding:0px !important;
+}
+.app-root-ios .secondary-tabs .content-ios .scroll-content{
+    margin-top:44px !important;
+    padding-top:0px !important;
+}
+.btn-mylocation{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    padding:0px;
+  
+}
+.translateToTop{
+    animation-name: translateToTop;
+    animation-duration: 3s;
+}
+.translateToBottom{
+    animation-name: translateToBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes translateToBottom {
+    1%{
+        transform: translateY(0%)
+    }
+    100%{
+        transform: translateY(70%)
+    }
+}
+@keyframes translateToTop {
+    0%{
+        transform: translateY(100%)
+    }
+    50%{
+        transform: translateY(50%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+   
+}
+.container{
+    width:100%;
+    height: 100%;
+    position: relative;
+}

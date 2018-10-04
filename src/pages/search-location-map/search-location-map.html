@@ -1,0 +1,22 @@
+<!--
+  Generated template for the SearchLocationMapPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content>
+  <ion-item class="location-input">
+    <ion-input [(ngModel)]="location"></ion-input>
+  </ion-item>
+<div class="point-center">
+  <img src="assets/imgs/icon_arrival.png" alt="">
+</div>
+
+<div id="map_canvas" #map_canvas></div>
+<button ion-button color="secondary" [disabled]="location==''" class="btn-findroad" (click)="backToHome()">Tìm Đường</button>
+<button ion-button clear class="btn-mylocation" (click)="moveMyLocation()">
+  <img src="assets/imgs/btn_mylocation.png"  tapped alt="">
+</button>
+</ion-content>

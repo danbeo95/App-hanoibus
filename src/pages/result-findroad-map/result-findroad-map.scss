@@ -1,0 +1,52 @@
+page-result-findroad-map {
+    #map_canvas{
+        width: 100%;
+        height: 100%;
+    }
+    .info-route{
+        position: fixed;
+        bottom:0px;
+        width: 100%;
+        height: 50%;
+        background: #fff;
+        border-radius: 10px;
+        width: 95%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 1.2rem;
+        overflow-y: hidden;
+        img{
+            width: 25px;
+            height: auto;
+        }
+    }
+    .scroll-routes{
+        overflow-x: scroll;
+        white-space: nowrap;
+        flex-wrap: nowrap !important;
+        padding:10px 0px;
+        div{
+            display: inline-flex;
+            margin-left:5px;
+            width: auto;
+            height: 30px;
+            align-items: center;
+        }
+        img{
+            width: 25px;
+            height: 25px;
+        }
+        background: #dedede;
+    }
+    .instruction-route{
+        height:70%;
+        overflow-y: scroll;
+    }
+    .item-instruction-route{
+        border-bottom:1px solid #dedede;
+    }
+    .btn-mylocation{
+        top:20px !important;
+    }
+}

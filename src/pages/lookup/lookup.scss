@@ -1,0 +1,17 @@
+page-lookup {
+    .item-busstop{
+        border-bottom:1px solid #dedede;
+        padding:5px;
+        margin-bottom:10px;
+    }
+    .name-busstop span{
+        padding:5px;
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color:#fff;
+        background: map-get($colors, secondary )
+    }
+}   

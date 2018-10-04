@@ -1,0 +1,22 @@
+page-history {
+    .item-bookmark{
+        padding:10px;
+        margin-top:10px;
+        border-bottom: 1px solid #dedede;
+        position: relative;
+    }
+    .btn-findroad{
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        font-size: 1rem;
+        color:#fff;
+        padding:5px;
+        height: 2rem;
+    }
+    .date{
+        color:red;
+        font-size: 1.2rem;
+        margin-top:10px;
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -17,7 +18,7 @@
 
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD68gXzZa5TgTSUxCkd3wEG7kJELevoBY0&libraries=places"></script>
   <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
@@ -26,10 +27,10 @@
         .catch(err => console.error('Error', err));
     }
   </script>-->
-
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -46,4 +47,5 @@
   <script src="build/main.js"></script>
 
 </body>
+
 </html>

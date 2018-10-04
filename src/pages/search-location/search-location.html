@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons left >
+            <button ion-button navPop><ion-icon name="ios-arrow-back"></ion-icon></button>
+        </ion-buttons>
+        <ion-title>{{title}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-tabs tabsPlacement="top">
+        <ion-tab [root]="searchLocationGoogleRoot" tabTitle="Google" [rootParams]="rootParams"></ion-tab>
+        <ion-tab [root]="searchLocationMapRoot" tabTitle="Bản Đồ" [rootParams]="rootParams"></ion-tab>
+        <ion-tab [root]="searchLocationBusstopRoot" tabTitle="Điểm Dừng" [rootParams]="rootParams"></ion-tab>
+    </ion-tabs>
+</ion-content>
