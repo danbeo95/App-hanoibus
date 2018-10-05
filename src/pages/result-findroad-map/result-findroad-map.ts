@@ -37,6 +37,7 @@ export class ResultFindroadMapPage {
   // load params
   onLoadParams() {
     this.mRoute = this.navParams.get('route');
+    console.log(this.mRoute);
     this.mLocations = this.navParams.get('locations');
     this.findLocationBusstop();
   }
@@ -46,7 +47,6 @@ export class ResultFindroadMapPage {
       this.mMap = response.map;
       this.initMarker();
       this.mAppModule.getGoogleMapController().addPolyline(this.mMap, this.mRoute.overview_path).then(() => {
-        console.log('ok add polyline');
         this.addMarkerBusstop();
       }, e => {
         console.log('error' + e);
@@ -66,18 +66,30 @@ export class ResultFindroadMapPage {
     let steps: Array<any> = this.mRoute.legs[0].steps;
     steps.forEach((step) => {
       if (step['travel_mode'] == APP_KEY.TRAVEL_MODE_TRANSIT) {
-        let latlng: LatLng = new LatLng(step['start_location'].lat(), step['start_location'].lng());
-        let markerOptions: MarkerOptions = {
-          position: latlng,
+        let latlngBusstop: LatLng = new LatLng(step['start_location'].lat(), step['start_location'].lng());
+        let latlngArrivalStop: LatLng = new LatLng(step['transit']['arrival_stop']['location'].lat(),step['transit']['arrival_stop']['location'].lng());
+        let markerOptionsBusstop: MarkerOptions = {
+          position: latlngBusstop,
           icon: {
             url: 'assets/imgs/icon_busstop_small.png',
             size: {
-              width: 20,
+              width: 25,
               height: 25
             }
           }
         };
-        this.mMarkerBusstop.push(markerOptions);
+        let markerOptionsArrovalstop: MarkerOptions = {
+          position: latlngArrivalStop,
+          icon: {
+            url: 'assets/imgs/icon_bus_big_1.png',
+            size: {
+              width: 25,
+              height: 23
+            }
+          }
+        };
+        this.mMarkerBusstop.push(markerOptionsBusstop);
+        this.mMarkerBusstop.push(markerOptionsArrovalstop);
       }
     })
   };

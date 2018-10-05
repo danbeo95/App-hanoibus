@@ -8,10 +8,9 @@
 
 
 <ion-content>
-  <ion-fab>
-      <ion-searchbar [(ngModel)]="mSearchData" (ionInput)="onSearch()"></ion-searchbar>
-
-  </ion-fab>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="mSearchData" (ionInput)="onSearch()"></ion-searchbar>
+</ion-toolbar>
     <div class="busstop">
       <ion-row *ngFor="let busstop of mBusstopsFilter" align-items-center class="item-busstop" (click)="backToHome(busstop)">
         <ion-col col-2><img src="assets/imgs/icon_bus_small.png" alt="" width="25" height="auto"></ion-col>

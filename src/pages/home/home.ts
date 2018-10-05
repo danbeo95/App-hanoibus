@@ -122,11 +122,11 @@ export class HomePage {
   }
   // push to result find road page
   pushResultFindRoadPage() {
-    if (this.mLocations[0].location !== '') {
-      this.mAppModule.showToast('Vui lòng chọn điểm đến');
+    if (this.mLocations[0].location == '') {
+      this.mAppModule.showToast('Vui lòng chọn điểm  đi');
     }
-    else if (this.mLocations[1].location !== '') {
-      this.mAppModule.showToast('Vui lòng chọn điểm đi');
+    else if (this.mLocations[1].location == '') {
+      this.mAppModule.showToast('Vui lòng chọn điểm đến');
     }
     else {
       let params = Object.assign([], this.mLocations);

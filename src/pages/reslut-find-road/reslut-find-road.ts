@@ -4,6 +4,7 @@ import { Route } from '../../app-class/route';
 import { AppModuleProvider} from '../../providers/app-module/app-module';
 import {ResultFindroadMapPage } from '../../pages/result-findroad-map/result-findroad-map';
 import { ParamsToResultMap } from '../../app-interface/app-interface';
+import { AppConfig } from '../../app-config';
 /**
  * Generated class for the ReslutFindRoadPage page.
  *
@@ -44,14 +45,12 @@ export class ReslutFindRoadPage {
   // on load params
   onLoadParams(){
     this.mLocations  = this.navParams.get('locations');
-   
   }
   // on search direction route
   onDirectionRoute(){
     this.mAppModule.showLoading();
     this.mAppModule.getGoogleMapController().directionsRoute(this.mLocations).subscribe((routes)=>{
       this.mRoutes = routes;
-      console.log(routes);
       this.mAppModule.hideLoad();
     });
   }
@@ -68,6 +67,12 @@ export class ReslutFindRoadPage {
   switchLocation(){
     this.mLocations.reverse();
     this.onDirectionRoute();
+    this.setIconToMarker();
+  }
+  // set icon to marker
+  setIconToMarker() {
+    this.mLocations[0].setIconMarker(AppConfig.urlIconStart);
+    this.mLocations[1].setIconMarker(AppConfig.urlIconEnd);
   }
   // sort
   sort(){

@@ -17,6 +17,6 @@ export const InstructionsIconUrl = {
     start:'assets/imgs/icon_departure.png',
     end:'assets/imgs/icon_arrival.png',
     walking:'assets/imgs/icon_walk_small.png',
-    transit:'assets/imgs/icon_bus_small.png',
-    arrivalstop:'assets/imgs/icon_busstop_small.png'
+    transit:'assets/imgs/icon_busstop_small.png',
+    arrivalstop:'assets/imgs/icon_bus_small.png'
 }

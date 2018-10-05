@@ -32,6 +32,6 @@ export const AdmobConfigIos:AdMobFreeBannerConfig = {
 }
 export const AdmobConfigAndroid:AdMobFreeBannerConfig={
     isTesting:false,
-    id:'ca-app-pub-7630879376303461/5767108526',
+    id:'ca-app-pub-7630879376303461/7838446167',
     autoShow:true
 }

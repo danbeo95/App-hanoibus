@@ -38,14 +38,13 @@ export class GoogleMapController {
     return Observable.create((observer: Observer<ResponseLoadMap>) => {
       let map: GoogleMap;
       // let location = new LatLng(20.9909253, 105.7947234);
-
       map = GoogleMaps.create(mapElement.nativeElement, AppConfig.GoogleMapOptions);
       map.on(GoogleMapsEvent.MAP_READY).subscribe(() => {
-        map.getMyLocation({ enableHighAccuracy: true }).then((myLocation: MyLocation) => {
+        LocationService.getMyLocation({ enableHighAccuracy: true }).then((myLocation: MyLocation) => {
           let cameraPosition: CameraPosition<ILatLng> = {
             target: myLocation.latLng,
             duration: 2000,
-            zoom: 18,
+            zoom: 12,
             padding: 50
           }
           map.animateCamera(cameraPosition).then(() => {
@@ -145,8 +144,8 @@ export class GoogleMapController {
       }
     }
     let directionRequests = {
-      origin: fake.start,
-      destination: fake.end,
+      origin: originLatlng,
+      destination: destinationLatlng,
       travelMode: 'TRANSIT',
       provideRouteAlternatives: true,
       transitOptions: {

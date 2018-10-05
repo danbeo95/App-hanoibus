@@ -9,6 +9,6 @@ export class AppUltil{
         let date = moment().startOf('day').seconds(value);
         let hours = date.hour() > 0 ? date.hour()+' Giờ':'';
         let mins = date.minute()>0?date.minute()+' Phút':'';
-        return hours+mins;
+        return hours+' '+ ' ' +mins;
     }
 }
