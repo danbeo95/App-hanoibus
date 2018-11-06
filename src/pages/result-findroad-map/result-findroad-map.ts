@@ -6,6 +6,8 @@ import { Route } from '../../app-class/route';
 import { Locations } from '../../app-class/locations';
 import { Instructions } from '../../app-class/instructions';
 import { APP_KEY } from '../../app-key';
+import { AppConfig } from '../../app-config';
+
 /**
  * Generated class for the ResultFindroadMapPage page.
  *
@@ -37,7 +39,6 @@ export class ResultFindroadMapPage {
   // load params
   onLoadParams() {
     this.mRoute = this.navParams.get('route');
-    console.log(this.mRoute);
     this.mLocations = this.navParams.get('locations');
     this.findLocationBusstop();
   }
@@ -71,7 +72,7 @@ export class ResultFindroadMapPage {
         let markerOptionsBusstop: MarkerOptions = {
           position: latlngBusstop,
           icon: {
-            url: 'assets/imgs/icon_busstop_small.png',
+            url: AppConfig.urlIconBusstop,
             size: {
               width: 25,
               height: 25
@@ -81,10 +82,10 @@ export class ResultFindroadMapPage {
         let markerOptionsArrovalstop: MarkerOptions = {
           position: latlngArrivalStop,
           icon: {
-            url: 'assets/imgs/icon_bus_big_1.png',
+            url: AppConfig.urlIconBusArrivalStop,
             size: {
-              width: 25,
-              height: 23
+              width: 20,
+              height: 20
             }
           }
         };

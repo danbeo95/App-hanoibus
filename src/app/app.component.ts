@@ -38,6 +38,9 @@ export class MyApp {
       this.statusBar.backgroundColorByHexString('#000');
       this.splashScreen.hide();
       this.mAppModule.showAdmob();
+      this.platform.pause.subscribe(()=>{
+        
+      })
     });
   }
 

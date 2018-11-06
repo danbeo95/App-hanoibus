@@ -24,7 +24,7 @@ export class AppModuleProvider {
     this.mGoogleMapController = new GoogleMapController();
     this.mLoaddataController = new LoaddataController();
     this.mAmodController = new AdmobController();
-    this.mAmodController.setAdmob(this.mAdmob);
+    // this.mAmodController.setAdmob(this.mAdmob);
     this.mLoaddataController.setHttp(this.mHttp);
     console.log('Hello AppModuleProvider Provider');
   }

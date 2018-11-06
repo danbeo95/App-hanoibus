@@ -33,4 +33,7 @@ export class AppConfig{
     }
     public static urlIconStart:string = 'assets/imgs/icon_departure.png';
     public static urlIconEnd:string = 'assets/imgs/icon_arrival.png';
+    public static urlIconBusstop:string = 'assets/imgs/icon_busstop_small.png';
+    public static urlIconBusArrivalStop:string = 'assets/imgs/icon_bus_arrival_stop.png';
+
 }
