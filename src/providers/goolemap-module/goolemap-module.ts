@@ -43,8 +43,8 @@ export class GoogleMapController {
         LocationService.getMyLocation({ enableHighAccuracy: true }).then((myLocation: MyLocation) => {
           let cameraPosition: CameraPosition<ILatLng> = {
             target: myLocation.latLng,
-            duration: 2000,
-            zoom: 12,
+            duration: 5000,
+            zoom: 15,
             padding: 50
           }
           map.animateCamera(cameraPosition).then(() => {
