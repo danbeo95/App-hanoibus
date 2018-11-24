@@ -1,14 +1,14 @@
 page-reslut-find-road {
     .toolbar-direction{
-        background: #fff;
+        background: red;
        
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
 		border-radius: 20px;
     }
     .item-route{
         background:#fff;
-        margin-bottom:10px;
+        margin-bottom:30px;
         box-shadow: 0px 0px 1px 5px #dedede;
     }
     .scroll-routes{
@@ -22,8 +22,8 @@ page-reslut-find-road {
             height: 30px;
         }
         img{
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
         }
     
     }
@@ -32,7 +32,7 @@ page-reslut-find-road {
         justify-content: center;
         align-items: center;
         img{
-            margin-right: 15px;
+            margin-right: 45px;
         }
         background: ghostwhite;
         border-radius: 10px;
@@ -40,7 +40,7 @@ page-reslut-find-road {
     }
     .btn-detail{
         font-size:2rem !important;
-        height: 30px;
+        height: 40px;
         text-align: right;
         padding: 10px;
         color:#fff;
