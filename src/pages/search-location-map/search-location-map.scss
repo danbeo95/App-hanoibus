@@ -19,15 +19,15 @@ page-search-location-map {
         width: 100%;
     }
     .btn-findroad{
-        position: absolute;
-        bottom: 20px;
-        width: 80%;
+        position: none;
+        bottom: 30px;
+        width: 100%;
         margin: auto;
         left:0;
         right: 0;
         color:#fff;
     }
     .btn-mylocation{
-        bottom:80px !important;
+        bottom:100px !important;
     }
 }
