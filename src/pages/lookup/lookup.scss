@@ -5,12 +5,12 @@ page-lookup {
         margin-bottom:10px;
     }
     .name-busstop span{
-        padding:15px;
-        width: 65px;
+        padding:35px;
+        width: 75px;
         height: 45px;
         display: inline-flex;
-        align-items: left;
-        justify-content: left;
+        align-items: center;
+        justify-content: center;
         color:#fff;
         background: map-get($colors, secondary )
     }
