@@ -81,10 +81,10 @@ export class ReslutFindRoadPage {
       inputs:this.mInputAlerts,
       buttons:[
         {
-          text:'Cancel'
+          text:'Hủy'
         },
         {
-          text:'Ok',
+          text:'ĐỒng ý',
           handler:(value)=>{
             this.doSort(value);
           }
