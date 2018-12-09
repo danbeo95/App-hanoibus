@@ -19,7 +19,7 @@ import { ParamsToLookUp  } from '../../app-interface/app-interface';
 })
 export class LookupPage {
   mBusstops:Array<Busstop> = [];
-  itemPerLoad:number = 10;
+  itemPerLoad:number = 15;
   constructor(public navCtrl: NavController, public navParams: NavParams,private mAppModule:AppModuleProvider) {
     this.getBusstop();
   }
