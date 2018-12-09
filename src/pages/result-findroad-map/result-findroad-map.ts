@@ -124,10 +124,10 @@ export class ResultFindroadMapPage {
           distance: step.distance,
           duration: step.duration
         });
-        let arrivalStop = transit['arrival_stop'];
+  /*       let arrivalStop = transit['arrival_stop'];
         let instructionArrivalStop = this.fillterArrivalStop(arrivalStop);
         this.mInstructions.push(instructionBus);
-        this.mInstructions.push(instructionArrivalStop);
+        this.mInstructions.push(instructionArrivalStop); */
       }
     });
     // push end location
