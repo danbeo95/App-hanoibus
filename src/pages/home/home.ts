@@ -37,8 +37,8 @@ export class HomePage {
   constructor(public navCtrl: NavController, public platform: Platform,
     private mAppModule: AppModuleProvider, private mZone: NgZone) {
     this.loadMap();
-    this.mLocations.push(new Locations());
-    this.mLocations.push(new Locations());
+    // this.mLocations.push(new Locations());
+    // this.mLocations.push(new Locations());
     this.setIconToMarker();
     this.subscribeEvent();
   }
